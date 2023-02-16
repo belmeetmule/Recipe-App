@@ -1,0 +1,17 @@
+<h1> Recipe list </h1>
+
+<% if @recipes.any? %>
+    <%= @recipes.each do |recipe| %>
+        <div> 
+            <div>
+                <%= recipe.name %>
+                <%= link_to "Remove", 
+                            root_path,
+                            method: :delete %>
+            </div>
+            <%= recipe.description %>
+        </div>
+    <% end %>
+<% else %>
+    <p> There is no data yet </p>
+<% end %>
