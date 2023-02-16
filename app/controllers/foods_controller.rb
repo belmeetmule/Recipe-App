@@ -11,10 +11,13 @@ class FoodsController < ApplicationController
     end
 
     def create
-        @food = Food.new(food_params)
-        if @food.save?
-            redirect_to :foods_path
+        @user = User.find(params[:user_id])
+        @food = @user.foods.new(**food_params)
+        if @food.save
+            flash[:success] = 'Food saved successfully'
+            redirect_to user_foods_url
         else
+            flash.now[:error] = 'Error: Food could not be saved'
             render :new
         end
     end
@@ -37,7 +40,7 @@ class FoodsController < ApplicationController
     private
 
     def food_params
-        params.require(:food).permit(:name, :measurement_unit, :price)
+        params.require(:food).permit(:name, :measurement_unit, :price, :user_id)
     end
 
 end
