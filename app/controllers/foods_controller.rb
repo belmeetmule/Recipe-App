@@ -4,7 +4,7 @@ class FoodsController < ApplicationController
 
   def index
     # @user = User.find(params[:user_id])
-    @foods = @user.foods
+    @foods = @user.foods.sort().reverse
     render :index
   end
 
@@ -26,6 +26,7 @@ class FoodsController < ApplicationController
   end
 
   def destroy
+    @user = current_user
     if @food.destroy
       flash[:success] = 'Food was successfully deleted.'
     else
