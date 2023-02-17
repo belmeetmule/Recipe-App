@@ -5,10 +5,9 @@ class RecipesController < ApplicationController
 
   def create
     @user = current_user
-    @recipe = @user.recipes.new(recipes_params)
-    @recipe.public = false
+    @recipe = @user.recipes.new(**recipes_params)
     if @recipe.save
-      redirect_to recipes_path, notice: 'recipe was successfully created'
+      redirect_to user_recipes_path, notice: 'recipe was successfully created'
     else
       render :new, alert: "Couldn't create recipe for user"
     end
@@ -25,13 +24,13 @@ class RecipesController < ApplicationController
 
   def destroy
     @recipe = Recipe.find(params[:id])
-    @recipe.destroy
-    redirect_to recipes_path, notice: 'Recipe was deleted successfully'
+    @recipe.destroy!
+    redirect_to recipes_path
   end
 
   private
 
   def recipes_params
-    params.permit(:name, :description, :preparation_time, :cooking_time, current_user.id)
+    params.require(:recipe).permit(:name, :preparation_time, :cooking_time, :description, :public, :user_id)
   end
 end

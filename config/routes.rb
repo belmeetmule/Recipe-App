@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   #root to: foods_path
   resources :users, only: [:index, :show] do
     resources :foods, except: [:update]
-    resources :recipes, only: [:create, :index, :show, :destroy]
+    resources :recipes, except: [:update]
   end
   
 end
