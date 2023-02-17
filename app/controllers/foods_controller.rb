@@ -1,7 +1,10 @@
 class FoodsController < ApplicationController
+  before_action :set_food, only: %i[show destroy]
+  before_action :set_user, only: %i[index show create]
+
   def index
     # @user = User.find(params[:user_id])
-    @foods = Food.all
+    @foods = @user.foods
     render :index
   end
 
@@ -23,23 +26,29 @@ class FoodsController < ApplicationController
   end
 
   def destroy
-    @food = Food.find(params[:id])
-    @food.destroy
-    redirect_to foods_path
+    if @food.destroy
+      flash[:success] = 'Food was successfully deleted.'
+    else
+      flash[:error] = 'Error: Food could not be deleted'
+    end
+    redirect_to user_foods_url
   end
 
   def show
-    @food = Food.find(params[:id])
-  end
-
-  def edit
-    @food = Food.find(params[:id])
-    render :edit
+    @food
   end
 
   private
 
+  def set_user
+    @user = User.find(params[:user_id])
+  end
+
+  def set_food
+    @food = set_user.foods.find(params[:id])
+  end
+
   def food_params
-    params.require(:food).permit(:name, :measurement_unit, :price, :user_id)
+    params.require(:food).permit(:name, :measurement_unit, :price, :quantity, :user_id)
   end
 end
