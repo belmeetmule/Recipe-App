@@ -1,13 +1,12 @@
 class RecipesController < ApplicationController
-  # GET /recipes/new
   def new
     @recipe = Recipe.new
   end
 
-  # POST /recipes or /recipes.json
   def create
     @user = current_user
     @recipe = @user.recipes.new(recipes_params)
+    @recipe.public = false
     if @recipe.save
       redirect_to recipes_path, notice: 'recipe was successfully created'
     else
@@ -15,26 +14,24 @@ class RecipesController < ApplicationController
     end
   end
 
-  # GET /recipes or /recipes.json
   def index
     @recipes = Recipe.all
   end
 
-  # GET /recipes/1 or /recipes/1.json
   def show
     @recipe = Recipe.find(params[:id])
+    @foods = Food.all
   end
 
-  # DELETE /recipes/1 or /recipes/1.json
   def destroy
     @recipe = Recipe.find(params[:id])
     @recipe.destroy
+    redirect_to recipes_path, notice: 'Recipe was deleted successfully'
   end
 
   private
 
-  # Only allow a list of trusted parameters through.
-  def recipe_params
-    params.permit(:name, :description, current_user.id)
+  def recipes_params
+    params.permit(:name, :description, :preparation_time, :cooking_time, current_user.id)
   end
 end
