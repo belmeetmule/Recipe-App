@@ -1,7 +1,6 @@
 class FoodsController < ApplicationController
-
-  before_action :get_food, only: %i[show destroy]
-  before_action :get_user, only: %i[index show create]
+  before_action :set_food, only: %i[show destroy]
+  before_action :set_user, only: %i[index show create]
 
   def index
     # @user = User.find(params[:user_id])
@@ -41,12 +40,12 @@ class FoodsController < ApplicationController
 
   private
 
-  def get_user
+  def set_user
     @user = User.find(params[:user_id])
   end
 
-  def get_food
-    @food = get_user.foods.find(params[:id])
+  def set_food
+    @food = set_user.foods.find(params[:id])
   end
 
   def food_params
