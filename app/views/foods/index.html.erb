@@ -19,7 +19,7 @@
                 <td> <%= food.measurement_unit %> </td>
                 <td> $ <%= food.price %> </td>
                 <td> <%= link_to "delete", 
-                         user_foods_path,
+                         user_food_path(@user, food),
                          method: :delete %> </td>
             </tr>
         <% end %>
