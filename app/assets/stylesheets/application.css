@@ -196,3 +196,9 @@ h5 {
   display: flex;
   gap: 20px;
 }
+
+.flex-col {
+  flex-direction: column;
+  gap: 20px;
+}
+

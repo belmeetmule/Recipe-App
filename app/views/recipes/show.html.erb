@@ -30,14 +30,13 @@
 
     <div class="flex detail-col">
         <div>
-            <button class="btn btn-primary">Generate Shopping List</button>
-        </div>
-        <div class="col-md-4">
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary me-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
-              Add Ingredients
-            </button>
-          </div>
+        <%= link_to "Generate Shopping List", user_recipe_general_shopping_list_index_path(@user, @recipe), class: '' %>
+      </div>
+
+      <div>
+        <%= link_to "Add ingredient", new_user_recipe_recipe_food_path(@user, @recipe), class: '' %>
+      </div>
+        
    </div> 
    <hr>
 

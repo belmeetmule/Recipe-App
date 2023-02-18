@@ -10,17 +10,17 @@
         </ul>
       </div>
     <% end %>
-  
-    <div class="input-group input-group-outline mb-3">
+  <div class="form flex flex-col">
+    <div>
       <label class="form-label">Quantity</label>
-      <%= form.number_field :quantity, class: 'form-control focus:border-blue-600' %>
+      <%= form.number_field :quantity, class: 'form-control' %> <br/>
     </div>
-  
-    <span class="self-start text-sm mt-2 text-gray-500">*Click to dropdown</span>
-    
-    <div class="input-group input-group-outline mb-3">
-      <%= form.select :food_id, @user.foods.order(name: :asc).map { |f| [f.name, f.id]}, {}, class: "form-control px-4 " %>
+      
+    <div class="form flex">
+    <span class="">*Click to dropdown</span>
+      <%= form.select :food_id, @user.foods.order(name: :asc).map { |f| [f.name, f.id]}, {}, class: "form-control" %>
     </div>
   
    <%= form.button "Add Ingredient", type: "submit", class: "button mb-5 button-green bg-emerald-300", 'data-ripple-light': true %>
+   </div>
   <% end %>
