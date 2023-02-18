@@ -1,18 +1,21 @@
+
 <h1> Create new food </h1>
 
 <%= form_with model: @food, url: user_foods_path do |f| %>
-    <%= f.label :name  %> 
-    <%= f.text_field :name %> <br/>
-    <%= f.label :measurement_unit %>
-    <%= f.text_field :measurement_unit %> <br/>
-    <%= f.label :price %>
-    <%= f.number_field :price %> <br/>
-    <%= f.label :quantity %>
-    <%= f.number_field :quantity %> <br/>
-    <%= f.submit %>
+    
+    <%= f.text_field :name, placeholder:"Name" %> <br/>
+    
+    <%= f.text_field :measurement_unit, placeholder:"Measurement unit" %> <br/>
+ 
+    <%= f.number_field :price, placeholder:"Price" %> <br/>
+   
+    <%= f.number_field :quantity, placeholder:"Quantity" %> <br/>
+    <%= f.submit%>
 <% end %>
 
 <div>
   <%= link_to "Back to foods", user_foods_path %>
 </div>
+
+</section>
     
