@@ -23,9 +23,10 @@ class RecipesController < ApplicationController
   end
 
   def destroy
-    @recipe = Recipe.find(params[:id])
+    @user = current_user
+    @recipe = @user.recipes.find(params[:id])
     @recipe.destroy!
-    redirect_to recipes_path
+    redirect_to user_recipes_path
   end
 
   private

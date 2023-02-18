@@ -14,8 +14,8 @@
                      user_recipe_path(current_user, recipe),
                         method: :get %> 
 
-                        <%= link_to "remove", 
-                            user_recipe_path(:recipe.id),
+                        <%= button_to "remove", 
+                            user_recipe_path(current_user, recipe),
                             method: :delete %> 
                 </div>
 
