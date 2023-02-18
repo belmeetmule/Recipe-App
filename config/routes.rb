@@ -17,5 +17,5 @@ Rails.application.routes.draw do
     resources :foods, except: [:update]
     resources :recipes, except: [:update]
   end
-  
+  resources :public_recipes, only: [:index]
 end

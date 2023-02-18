@@ -1,4 +1,5 @@
 class PublicRecipesController < ApplicationController
+  before_action :public_recipes, only: [:index]
   def index
     @public_recipes
   end
