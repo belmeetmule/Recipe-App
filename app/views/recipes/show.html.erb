@@ -1,27 +1,20 @@
-<div class="container">
-  <h1 class="text-center my-2"><%= @recipe.name %></h1>
+<div class="page">
+  <h1 class=""><%= @recipe.name %></h1>
   
-    <div class="col-md-8">
+    <div class="">
       <p>Preparation Time: <%= @recipe.preparation_time %></p>
       <p>Cooking Time: <%= @recipe.cooking_time %></p>
-      <p>Step go here...</p>
+      <p>Steps go here...</p>
       <div class="col-md-8">
-          <button class="btn btn-primary">Generate Shopping List</button>
-        </div>
-    </div>
-    
-    
-    <div class="row">
-        
-        <div class="col-md-4">
-          <!-- Button trigger modal -->
-          <button type="button" class="btn btn-primary me-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Add Ingredients
-          </button>
-        </div>
-    </div>
-   <hr>
+        <%= link_to "Generate Shopping List", user_recipe_general_shopping_list_index_path(@user, @recipe), class: '' %>
+      </div>
 
+      <div>
+        <%= link_to "Add ingredient", new_user_recipe_recipe_food_path(@user, @recipe), class: '' %>
+      </div>
+    </div>
+  
+   <hr>
 
    <table class="table table-hover table-bordered mt-4 table-responsive{-sm|-md|-lg|-xl} ">
       <thead>
