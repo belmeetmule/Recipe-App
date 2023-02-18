@@ -1,9 +1,51 @@
+
+<section class="container flex food-placeholder">
+<div class="food flex">
+  <h1 class="title"><%= @recipe.name %></h1>
+  
+    <div class="flex recipe-detail">
+    <div class="flex detail-col">
+    <div class="flex time">
 <div class="page">
   <h1 class=""><%= @recipe.name %></h1>
   
     <div class="">
       <p>Preparation Time: <%= @recipe.preparation_time %></p>
+    </div>
+
+      <div>
+        <% if @recipe.public == false %>
+          <%= check_box :public, checked: false  %>
+          <label class="check-label" for="unchecked">Public</label>
+        <% else %>
+          <%= check_box :public, checked: true %>
+          <label class="check-label" for="checked">Public</label>
+        <%end%>
+      </div>
+
+    </div>
+
+    <div class="flex time">
       <p>Cooking Time: <%= @recipe.cooking_time %></p>
+    </div> 
+
+    <div>
+      <p>Step go here...</p>
+    </div>
+
+
+
+    <div class="flex detail-col">
+        <div>
+            <button class="btn btn-primary">Generate Shopping List</button>
+        </div>
+        <div class="col-md-4">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary me-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Add Ingredients
+            </button>
+          </div>
+   </div> 
       <p>Steps go here...</p>
       <div class="col-md-8">
         <%= link_to "Generate Shopping List", user_recipe_general_shopping_list_index_path(@user, @recipe), class: '' %>
@@ -39,4 +81,4 @@
       </tbody>
     </table>
 </div>
-
+</section>
