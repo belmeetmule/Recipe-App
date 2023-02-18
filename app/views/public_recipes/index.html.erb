@@ -7,60 +7,40 @@
   <% @public_recipes.each do |recipe| %>
     <li class="line flex">
 <div id="<%= dom_id recipe %>">
-  <p>
-    <strong>User:</strong>
-    <%= recipe.user_id %>
-  </p>
-
-  <p>
-    <strong>Name:</strong>
-    <%= recipe.name %>
-  </p>
-
-  <p>
-    <strong>Preparation time:</strong>
-    <%= recipe.preparation_time %>
-  </p>
-
-  <p>
-    <strong>Cooking time:</strong>
-    <%= recipe.cooking_time %>
-  </p>
-
-  <p>
-    <strong>Description:</strong>
-    <%= recipe.description %>
-  </p>
-
-  <p>
-    <strong>Public:</strong>
-    <%= recipe.public %>
-  </p>
+ 
+  <div>
+        <h2>
+        <%= recipe.name %> <br>
+        <span>By: </span>
+          <%= recipe.user.name %>
+          </h2>
+  </div>
 
 </div>
 
 <div class="recipe-info flex">
-          <h2>
-          </h2>
-          <span>By: </span>
+          
  </div>
 
 
 <div class="recipe-cost flex">
-<div>
-  <span>Total food items: </span>
-</div>
-<div>
-  <span>Total price:</span>
-</div>
+    <div>
+      <span>Total food items: <%= @public_recipes.count %> </span>
+    </div>
+    <div>
+      <span>Total price:<%= recipe %></span>
+    </div>
 </div>
 
-<p>
-      <%= link_to "Open Recipe", user_recipe_path(recipe.user, recipe), class: '' %>
-    </p>
 
 </li>
+  
+<p>
+<br>
+<%= link_to "Open Recipe", user_recipe_path(recipe.user, recipe), class: '' %>
+</p>
   <% end %>
+
 </div>
 <ul>
 
