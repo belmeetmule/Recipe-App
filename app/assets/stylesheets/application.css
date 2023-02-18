@@ -59,3 +59,8 @@ button {
 h5 {
   line-height: 5px;
 }
+
+.flex-row{
+    display: flex;
+    gap: 20px;
+}
