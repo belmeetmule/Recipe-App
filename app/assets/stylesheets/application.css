@@ -1,19 +1,4 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
- body{
+body{
     font-family: Verdana, Arial, Tahoma, Serif;
  }
 
@@ -25,6 +10,10 @@
     justify-content: center;
     align-items: center;
 }
+
+ul {
+    list-style: none;
+  }
 
  .container-cont {
     width: fit-content;
@@ -73,6 +62,131 @@ h5 {
     line-height: 5px;
 }
 
-button{
-    
+.submit {
+    border-radius: 8px;
+    align-self: flex-end;
+    padding: 0.6em 2.5em;
+  }
+ 
+.container {
+ width: 100%;
+  min-height: 100vh;
+}
+
+.flex {
+    display: flex;
+  }
+
+  .food-placeholder {
+    justify-content: center;
+    padding: 2rem 0;
+  }
+
+  .sign {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .food {
+    width: 100%;
+    max-width: 768px;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0.5rem;
+  }
+  
+  .recipe {
+    outline: 1px solid #ccc;
+    padding: 1rem 0.5rem;
+    gap: 1rem;
+  }
+  
+  .recipe p {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+  
+  .recipe-detail {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .recipe-details {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .recipe-details button {
+    background: transparent;
+    color: #e84855;
+    padding: 0.5em 1em;
+    border: 1px solid #e84855;
+    width: 100px;
+  }
+
+
+  .field {
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  
+  .field textarea,
+  .field input {
+    padding: 0.5rem 1rem;
+    font-family: inherit;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 0.5rem;
+  }
+  
+  .field textarea {
+    height: 100px;
+    resize: none;
+  }
+  
+  .field textarea:focus,
+  .field input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px pink;
+  }
+
+  .title {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .detail-col {
+    justify-content: space-between;
+  }
+  
+  .time {
+    gap: 1rem;
+  }
+  
+  .public {
+    gap: 1rem;
+    flex-direction: column;
+  }
+
+  .line {
+    outline: 1px solid #ccc;
+    gap: 2rem;
+    padding: 1rem 2rem;
+  }
+  
+  .recipe-cost,
+.recipe-info {
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.recipe-info span {
+  font-size: 1rem;
+  color: #e84855;
+}
+
+.recipe-cost {
+  padding-block: 0.5rem;
 }

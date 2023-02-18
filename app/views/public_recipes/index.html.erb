@@ -1,8 +1,11 @@
-<h1 class="text-2xl text-center mb-3">Public Recipes</h1>
+<section class="container flex food-placeholder">
+<div class="food flex">
+<h1 class="title">Public Recipes</h1>
 
-<div class="public-recipes">
+<ul class="flex public">
+
   <% @public_recipes.each do |recipe| %>
-
+    <li class="line flex">
 <div id="<%= dom_id recipe %>">
   <p>
     <strong>User:</strong>
@@ -36,8 +39,30 @@
 
 </div>
 
+<div class="recipe-info flex">
+          <h2>
+          </h2>
+          <span>By: </span>
+ </div>
+
+
+<div class="recipe-cost flex">
+<div>
+  <span>Total food items: </span>
+</div>
+<div>
+  <span>Total price:</span>
+</div>
+</div>
+
 <p>
       <%= link_to "Open Recipe", user_recipe_path(recipe.user, recipe), class: '' %>
     </p>
+
+</li>
   <% end %>
 </div>
+<ul>
+
+</div>
+</section>

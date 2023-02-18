@@ -1,25 +1,46 @@
-<div class="container">
-  <h1 class="text-center my-2"><%= @recipe.name %></h1>
+<section class="container flex food-placeholder">
+<div class="food flex">
+  <h1 class="title"><%= @recipe.name %></h1>
   
-    <div class="col-md-8">
+    <div class="flex recipe-detail">
+    <div class="flex detail-col">
+    <div class="flex time">
       <p>Preparation Time: <%= @recipe.preparation_time %></p>
+    </div>
+
+      <div>
+        <% if @recipe.public == false %>
+          <%= check_box :public, checked: false  %>
+          <label class="check-label" for="unchecked">Public</label>
+        <% else %>
+          <%= check_box :public, checked: true %>
+          <label class="check-label" for="checked">Public</label>
+        <%end%>
+      </div>
+
+    </div>
+
+    <div class="flex time">
       <p>Cooking Time: <%= @recipe.cooking_time %></p>
+    </div> 
+
+    <div>
       <p>Step go here...</p>
-      <div class="col-md-8">
-          <button class="btn btn-primary">Generate Shopping List</button>
-        </div>
     </div>
-    
-    
-    <div class="row">
-        
+
+
+
+    <div class="flex detail-col">
+        <div>
+            <button class="btn btn-primary">Generate Shopping List</button>
+        </div>
         <div class="col-md-4">
-          <!-- Button trigger modal -->
-          <button type="button" class="btn btn-primary me-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Add Ingredients
-          </button>
-        </div>
-    </div>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary me-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Add Ingredients
+            </button>
+          </div>
+   </div> 
    <hr>
 
 
@@ -46,4 +67,4 @@
       </tbody>
     </table>
 </div>
-
+</section>

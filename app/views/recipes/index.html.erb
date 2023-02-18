@@ -1,5 +1,6 @@
+<section class="container flex food-placeholder">
 <h1> Recipes</h1>
-<h3> List of recipes </h3>
+<div class="food flex">
 <%= button_to "Create new recipe", 
             new_user_recipe_path,
             method: :get %>
@@ -8,24 +9,22 @@
 
 
         <% @recipes.each do |recipe| %>
-            <section>
-                <div>
+    <div class='recipe flex'>
+          <div class="recipe-details flex">
+
                      <%= link_to recipe.name, 
                      user_recipe_path(current_user, recipe),
                         method: :get %> 
 
                         <%= button_to "remove", 
                             user_recipe_path(current_user, recipe),
-                            method: :delete %> 
-                </div>
-
-                 <div>
-                        <%= recipe.description %>
-                </div>
-            </section>
+                            method: :delete %>                 
+           </div> 
+           <p><%= recipe.description %></p>
         <% end %>
+    </div>    
 <% else %>
-    <p> There are no recipes yet. </p>
+    <p> There are no recipes yet. </p>   
 <% end %>
-
-    
+</div>
+</section>
