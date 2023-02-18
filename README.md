@@ -198,7 +198,6 @@ Example:
 ## 🔭 Future Features <a name="future-features"></a>
 
 - Search functionality
-- Add ingredient button functionality
 - Page pagination
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
