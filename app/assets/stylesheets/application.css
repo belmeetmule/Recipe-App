@@ -13,3 +13,66 @@
  *= require_tree .
  *= require_self
  */
+ body{
+    font-family: Verdana, Arial, Tahoma, Serif;
+ }
+
+ .page {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 30px auto;
+    justify-content: center;
+    align-items: center;
+}
+
+ .container-cont {
+    width: fit-content;
+}
+
+ table {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+
+
+  th, tbody, td{
+    padding: 10px 30px;
+  }
+
+  thead{
+    background-color: #948c8c;
+    padding: 30px auto;
+    color: whitesmoke
+  }
+
+table tr:nth-child(even){
+    background-color: #f1dbdb;
+}
+
+button {
+    padding: 10px 20px;
+}
+
+.button-right{
+    float: right;
+}
+
+.btn-red{
+    background-color: red;
+    border: 1px solid white;
+    color: white;
+}
+
+.buttons-in-row{
+    display: flex;
+    gap: 15px;
+}
+
+h5 {
+    line-height: 5px;
+}
+
+button{
+    
+}
