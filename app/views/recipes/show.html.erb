@@ -1,14 +1,10 @@
-
 <section class="container flex food-placeholder">
 <div class="food flex">
   <h1 class="title"><%= @recipe.name %></h1>
   
     <div class="flex recipe-detail">
     <div class="flex detail-col">
-    <div class="flex time">
-<div class="page">
-  <h1 class=""><%= @recipe.name %></h1>
-  
+    <div class="flex time"> 
     <div class="">
       <p>Preparation Time: <%= @recipe.preparation_time %></p>
     </div>
@@ -33,8 +29,6 @@
       <p>Step go here...</p>
     </div>
 
-
-
     <div class="flex detail-col">
         <div>
             <button class="btn btn-primary">Generate Shopping List</button>
@@ -46,16 +40,6 @@
             </button>
           </div>
    </div> 
-      <p>Steps go here...</p>
-      <div class="col-md-8">
-        <%= link_to "Generate Shopping List", user_recipe_general_shopping_list_index_path(@user, @recipe), class: '' %>
-      </div>
-
-      <div>
-        <%= link_to "Add ingredient", new_user_recipe_recipe_food_path(@user, @recipe), class: '' %>
-      </div>
-    </div>
-  
    <hr>
 
    <table class="table table-hover table-bordered mt-4 table-responsive{-sm|-md|-lg|-xl} ">
