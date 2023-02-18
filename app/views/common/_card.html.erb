@@ -1,0 +1,13 @@
+<% recipes.each do |recipe|%>
+  <div class="w-10/12 mx-auto border border-gray-300 rounded-lg my-4">
+    <div class="block p-6 rounded-lg shadow-lg bg-white w-full">
+      <%= link_to recipe.name, user_recipe_path(current_user, recipe), class: "text-gray-900 text-xl leading-tight font-medium mb-2" %>
+      <p class="text-gray-700 text-base mb-4 w-full float-right">
+        <%= recipe.description %>
+      </p>
+      <% if can? :delete, recipe %>
+        <%= button_to 'Remove', user_recipe_path(current_user, recipe), method: :delete, class: " inline-block" %>
+      <% end %>
+    </div>
+  </div>
+<% end %>
