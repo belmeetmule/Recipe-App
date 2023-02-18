@@ -12,7 +12,6 @@ Rails.application.routes.draw do
   #root "foods#index"
   #root to: 'users#index'
 
-  #root to: foods_path
   resources :users, only: [:index, :show] do
     resources :foods, except: [:update]
     resources :recipes, except: [:update]

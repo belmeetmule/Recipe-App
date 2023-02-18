@@ -3,12 +3,9 @@
 <h4><%= @food.price %></h3>
 <h4><%= @food.quantity %></h3>
 
-<%= button_to "Edit Food", 
-              edit_user_food_path(@album),
-              method: :get %>
 
 <%= button_to "Delete Food", 
-              user_food_path(@album),
+              user_food_path(@user, @food),
               method: :delete %> 
 
 <%= button_to "Return to Foods Page", 
