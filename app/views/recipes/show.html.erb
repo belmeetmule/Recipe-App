@@ -4,10 +4,9 @@
   
     <div class="flex recipe-detail">
     <div class="flex detail-col">
-    <div class="flex time"> 
-    <div class="">
-      <p>Preparation Time: <%= @recipe.preparation_time %></p>
-    </div>
+      <div class="flex time"> 
+        <p>Preparation Time: <%= @recipe.preparation_time %></p>
+      </div>
 
       <div>
         <% if @recipe.public == false %>
