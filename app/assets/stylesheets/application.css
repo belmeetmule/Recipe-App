@@ -1,60 +1,61 @@
 
- body{
-    font-family: Verdana, Arial, Tahoma, Serif;
- }
-
- .page {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    margin: 30px auto;
-    justify-content: center;
-    align-items: center;
+body {
+  font-family: Verdana, Arial, Tahoma, serif;
 }
 
- .container-cont {
-    width: fit-content;
+.page {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 30px auto;
+  justify-content: center;
+  align-items: center;
 }
 
- table {
-    border: 1px solid black;
-    border-collapse: collapse;
-  }
+.container-cont {
+  width: fit-content;
+}
 
+table {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
 
-  th, tbody, td{
-    padding: 10px 30px;
-  }
+th,
+tbody,
+td {
+  padding: 10px 30px;
+}
 
-  thead{
-    background-color: #948c8c;
-    padding: 30px auto;
-    color: whitesmoke
-  }
+thead {
+  background-color: #948c8c;
+  padding: 30px 10px;
+  color: whitesmoke;
+}
 
-table tr:nth-child(even){
-    background-color: #f1dbdb;
+table tr:nth-child(even) {
+  background-color: #f1dbdb;
 }
 
 button {
-    padding: 10px 20px;
+  padding: 10px 20px;
 }
 
-.button-right{
-    float: right;
+.button-right {
+  float: right;
 }
 
-.btn-red{
-    background-color: red;
-    border: 1px solid white;
-    color: white;
+.btn-red {
+  background-color: red;
+  border: 1px solid white;
+  color: white;
 }
 
-.buttons-in-row{
-    display: flex;
-    gap: 15px;
+.buttons-in-row {
+  display: flex;
+  gap: 15px;
 }
 
 h5 {
-    line-height: 5px;
+  line-height: 5px;
 }
