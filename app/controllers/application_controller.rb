@@ -8,6 +8,11 @@ class ApplicationController < ActionController::Base
     users_url
   end
 
+  rescue_from CanCan::AccessDenied do
+    flash[:error] = 'Access denied!'
+    redirect_to root_url
+  end
+
   protected
 
   def configure_permitted_parameters

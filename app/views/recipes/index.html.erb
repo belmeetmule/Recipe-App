@@ -14,12 +14,13 @@
             <div class='recipe flex wide-gap'>
             <div class="recipe-details flex">
                      <%= link_to recipe.name, 
-                     user_recipe_path(current_user, recipe),
+                     user_recipe_path(recipe.user_id, recipe),
                         method: :get %> 
-
-                        <%= button_to "remove", 
-                            user_recipe_path(current_user, recipe),
-                            method: :delete %>   
+                        <% if can? :destroy, recipe %>
+                            <%= button_to "remove", 
+                                user_recipe_path(current_user, recipe),
+                                method: :delete %> 
+                        <% end %>  
                             
                 
            </div>

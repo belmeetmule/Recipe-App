@@ -224,4 +224,15 @@ select#recipe_food_food_id {
   width: 100%;
 }
 
+.td-gap{
+ padding-top: 5px;
+ gap: 15px;
+ align-items: center;
+ width: fit-content;
+}
+
+.td-gap > *{
+  margin: 0;
+}
+
 

@@ -1,4 +1,7 @@
 class User < ApplicationRecord
+
+  ROLES = %i[admin user]
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
