@@ -25,17 +25,18 @@
       <p>Cooking Time: <%= @recipe.cooking_time %></p>
     </div> 
 
-    <div>
+    <div class="flex time">
       <p>Step go here...</p>
     </div>
 
+    <div class="flex detail-col">
+
     <% if can? :manage, @recipe %>
-      <div class="flex detail-col">
-          <div>
+          <div class = "btn-link">
           <%= link_to "Generate Shopping List", user_recipe_general_shopping_list_index_path(@user, @recipe), class: '' %>
         </div>
 
-        <div>
+        <div class = "btn-link">
           <%= link_to "Add ingredient", new_user_recipe_recipe_food_path(@user, @recipe), class: '' %>
         </div>
       </div> 

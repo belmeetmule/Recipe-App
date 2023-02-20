@@ -255,7 +255,8 @@ ul.menu {
   align-items: center;
 }
 
-.menu-bar a {
+.menu-bar a,
+.btn-link a {
   text-decoration: none;
   border: 1px solid lavenderblush;
   border-radius: 8px;
