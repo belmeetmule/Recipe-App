@@ -206,20 +206,19 @@ h5 {
   gap: 20px;
 }
 
-.txt-center
-{
+.txt-center {
   text-align: center;
 }
 
-.btn-right{
+.btn-right {
   text-align: right;
 }
 
-form.button_to .btn-right{
+form.button_to .btn-right {
   text-align: right;
 }
 
-.wide-gap{
+.wide-gap {
   gap: 4.2rem;
 }
 
@@ -227,18 +226,18 @@ select#recipe_food_food_id {
   width: 100%;
 }
 
-.td-gap{
- padding-top: 5px;
- gap: 15px;
- align-items: center;
- width: fit-content;
+.td-gap {
+  padding-top: 5px;
+  gap: 15px;
+  align-items: center;
+  width: fit-content;
 }
 
-.td-gap > *{
+.td-gap > * {
   margin: 0;
 }
 
-.menu-bar{
+.menu-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -256,13 +255,13 @@ ul.menu {
   align-items: center;
 }
 
-.menu-bar a{
-    text-decoration: none;
-    border: 1px solid lavenderblush;
-    border-radius: 8px;
-    padding: 10px 15px;
-    background: blanchedalmond;
-    color: rosybrown;
+.menu-bar a {
+  text-decoration: none;
+  border: 1px solid lavenderblush;
+  border-radius: 8px;
+  padding: 10px 15px;
+  background: blanchedalmond;
+  color: rosybrown;
 }
 
 .menu-bar a:hover {
@@ -273,12 +272,10 @@ ul.menu {
 .actions input[type="submit"] {
   width: 100%;
   padding: 10px;
-  border: 1px solid, rosybrown;
+  border: 1px solid rosybrown;
 }
 
-.alerts{
-    text-align: center;
-    color: cadetblue;
+.alerts {
+  text-align: center;
+  color: cadetblue;
 }
-
-
