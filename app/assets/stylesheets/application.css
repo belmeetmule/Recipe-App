@@ -1,6 +1,8 @@
 
 body {
   font-family: Verdana, Arial, Tahoma, serif;
+  margin: 0;
+  padding: 0;
 }
 
 .page {
@@ -47,6 +49,7 @@ button {
 
 .button-right {
   float: right;
+  border-radius: 4px;
 }
 
 .btn-red {
@@ -68,6 +71,7 @@ h5 {
   border-radius: 8px;
   align-self: flex-end;
   padding: 0.6em 2.5em;
+  border: 1px solid coral;
 }
 
 .container {
@@ -87,7 +91,6 @@ h5 {
 .sign {
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 .food {
@@ -117,6 +120,7 @@ h5 {
 .recipe-details {
   flex-direction: column;
   gap: 1.5rem;
+  align-items: center;
 }
 
 .recipe-details button {
@@ -130,7 +134,7 @@ h5 {
 .field {
   width: 100%;
   flex-direction: column;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .field textarea,
@@ -139,7 +143,7 @@ h5 {
   font-family: inherit;
   border-radius: 8px;
   border: 1px solid #ccc;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.2rem;
 }
 
 .field textarea {
@@ -200,4 +204,78 @@ h5 {
 .flex-col {
   flex-direction: column;
   gap: 20px;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+.btn-right {
+  text-align: right;
+}
+
+form.button_to .btn-right {
+  text-align: right;
+}
+
+.wide-gap {
+  gap: 4.2rem;
+}
+
+select#recipe_food_food_id {
+  width: 100%;
+}
+
+.td-gap {
+  padding-top: 5px;
+  gap: 15px;
+  align-items: center;
+  width: fit-content;
+}
+
+.td-gap > * {
+  margin: 0;
+}
+
+.menu-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: blanchedalmond;
+  height: 100px;
+  padding: 0 1.5rem;
+}
+
+ul.menu {
+  list-style: none;
+  margin: 0;
+  display: flex;
+  gap: 10px;
+  font-size: 2.2rem;
+  align-items: center;
+}
+
+.menu-bar a {
+  text-decoration: none;
+  border: 1px solid lavenderblush;
+  border-radius: 8px;
+  padding: 10px 15px;
+  background: blanchedalmond;
+  color: rosybrown;
+}
+
+.menu-bar a:hover {
+  background: lightslategrey;
+  color: white;
+}
+
+.actions input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rosybrown;
+}
+
+.alerts {
+  text-align: center;
+  color: cadetblue;
 }
