@@ -23,6 +23,14 @@
     <%= f.text_area :description, cols: 20, rows: 10, placeholder: "description" %> <br/>
 </div>
 
+<div class='field flex'>
+<div>
+<%= f.check_box :public %>
+<span">Public</span>
+</div>
+</div>
+
+
     <%= f.submit 'Create Recipe', class: 'submit' %>
 <% end %>
 
