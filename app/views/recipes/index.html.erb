@@ -1,0 +1,36 @@
+<section class="container flex food-placeholder">
+
+<div class="food flex">
+    <h1 class = "txt-center"> Recipes</h1>
+    <div class = "btn-right">
+        <%= button_to "Create new recipe", 
+                new_user_recipe_path,
+                method: :get, 
+                class: "btn-right" %>
+    </div>
+
+<% if @recipes.any? %>
+        <% @recipes.each do |recipe| %>
+            <div class='recipe flex wide-gap'>
+            <div class="recipe-details flex">
+                     <%= link_to recipe.name, 
+                     user_recipe_path(recipe.user_id, recipe),
+                        method: :get %> 
+                        <% if can? :destroy, recipe %>
+                            <%= button_to "remove", 
+                                user_recipe_path(current_user, recipe),
+                                method: :delete %> 
+                        <% end %>  
+                            
+                
+           </div>
+           <p><%= recipe.description %></p>
+           </div> 
+           
+        <% end %>
+    </div>    
+<% else %>
+    <p> There are no recipes yet. </p>   
+<% end %>
+</div>
+</section>

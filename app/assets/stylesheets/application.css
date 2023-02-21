@@ -1,0 +1,290 @@
+
+body {
+  font-family: Verdana, Arial, Tahoma, serif;
+  margin: 0;
+  padding: 0;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 30px auto;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+}
+
+.container-cont {
+  width: fit-content;
+}
+
+table {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th,
+tbody,
+td {
+  padding: 10px 30px;
+}
+
+thead {
+  background-color: #948c8c;
+  padding: 30px 10px;
+  color: whitesmoke;
+}
+
+table tr:nth-child(even) {
+  background-color: #f1dbdb;
+}
+
+button {
+  padding: 10px 20px;
+}
+
+.button-right {
+  float: right;
+  border-radius: 4px;
+}
+
+.btn-red {
+  background-color: red;
+  border: 1px solid white;
+  color: white;
+}
+
+.buttons-in-row {
+  display: flex;
+  gap: 15px;
+}
+
+h5 {
+  line-height: 5px;
+}
+
+.submit {
+  border-radius: 8px;
+  align-self: flex-end;
+  padding: 0.6em 2.5em;
+  border: 1px solid coral;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.flex {
+  display: flex;
+}
+
+.food-placeholder {
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.sign {
+  flex-direction: column;
+  align-items: center;
+}
+
+.food {
+  width: 100%;
+  max-width: 768px;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0.5rem;
+}
+
+.recipe {
+  outline: 1px solid #ccc;
+  padding: 1rem 0.5rem;
+  gap: 1rem;
+}
+
+.recipe p {
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+.recipe-detail {
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.recipe-details {
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.recipe-details button {
+  background: transparent;
+  color: #e84855;
+  padding: 0.5em 1em;
+  border: 1px solid #e84855;
+  width: 100px;
+}
+
+.field {
+  width: 100%;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+}
+
+.field textarea,
+.field input {
+  padding: 0.5rem 1rem;
+  font-family: inherit;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 0.2rem;
+}
+
+.field textarea {
+  height: 100px;
+  resize: none;
+}
+
+.field textarea:focus,
+.field input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px pink;
+}
+
+.title {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.detail-col {
+  justify-content: space-between;
+}
+
+.time {
+  gap: 1rem;
+}
+
+.public {
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.line {
+  outline: 1px solid #ccc;
+  gap: 2rem;
+  padding: 1rem 2rem;
+}
+
+.recipe-cost,
+.recipe-info {
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.recipe-info span {
+  font-size: 1rem;
+  color: #e84855;
+}
+
+.recipe-cost {
+  padding-block: 0.5rem;
+}
+
+.flex-row {
+  display: flex;
+  gap: 20px;
+}
+
+.flex-col {
+  flex-direction: column;
+  gap: 20px;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+.btn-right {
+  text-align: right;
+}
+
+form.button_to .btn-right {
+  text-align: right;
+}
+
+.wide-gap {
+  gap: 4.2rem;
+}
+
+select#recipe_food_food_id {
+  width: 100%;
+}
+
+.td-gap {
+  padding-top: 5px;
+  gap: 15px;
+  align-items: center;
+  width: fit-content;
+}
+
+.td-gap > * {
+  margin: 0;
+}
+
+.menu-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: blanchedalmond;
+  height: 100px;
+  padding: 0 1.5rem;
+}
+
+ul.menu {
+  list-style: none;
+  margin: 0;
+  display: flex;
+  gap: 10px;
+  font-size: 2.2rem;
+  align-items: center;
+}
+
+.menu-bar a,
+.btn-link a {
+  text-decoration: none;
+  border: 1px solid lavenderblush;
+  border-radius: 8px;
+  padding: 10px 15px;
+  background: blanchedalmond;
+  color: rosybrown;
+}
+
+.menu-bar a:hover {
+  background: lightslategrey;
+  color: white;
+}
+
+.actions input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rosybrown;
+}
+
+.alerts {
+  text-align: center;
+  color: cadetblue;
+}
+
+.hr {
+  height: 2px;
+  width: 100%;
+  border: 1px solid black;
+  background-color: rgb(95, 89, 89);
+  margin: 5px 5px;
+}

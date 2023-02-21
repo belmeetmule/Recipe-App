@@ -1,0 +1,21 @@
+<section class="sign container flex">
+<div class= "menu">
+<%= link_to "Back to foods", user_foods_path %>
+</div>
+<h1> Create new food </h1>
+
+<%= form_with model: @food, url: user_foods_path do |f| %>
+  <div class='field flex'>
+    <%= f.text_field :name, placeholder:"Name" %> <br/>
+    
+    <%= f.text_field :measurement_unit, placeholder:"Measurement unit" %> <br/>
+ 
+    <%= f.number_field :price, placeholder:"Price" %> <br/>
+   
+    <%= f.number_field :quantity, placeholder:"Quantity" %> <br/>
+    <%= f.submit%>
+    </div>
+<% end %>
+
+</section>
+    

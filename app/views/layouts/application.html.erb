@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Recipe App</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  </head>
+   <body>
+   <section class = 'menu-bar'>
+  <% if user_signed_in? %>
+    <ul class = "menu">
+    <li> 
+    <%= link_to "Foods", user_foods_path(current_user.id), method: :get %>
+    </li>
+    <li> 
+    <%= link_to "Recipe", user_recipes_path(current_user.id), method: :get %>
+    </li>
+    <li> 
+    <%= link_to "Public recipe", public_recipes_path, method: :get %>
+    </li>
+    </ul>
+    <div class="account"> 
+      
+        <%= link_to "sign out", destroy_user_session_path, method: :delete   %>
+      <% else %>
+        <%= link_to "sign in", new_user_session_path, method: :get %>
+      <% end %>
+    </div>
+  </section>
+  <div class = "alerts">
+      <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+       <div>
+       
+    <%= yield %>
+  </body>
+</html>
